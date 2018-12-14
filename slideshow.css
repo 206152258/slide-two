@@ -1,0 +1,33 @@
+
+img{
+ width:300px;
+ height:150px;
+ position: absolute;
+ /* 此处不加上top 和transition会导致后面one不能正常运行 */
+ top:0;
+ transition:all 0.3s;
+
+}
+#images{
+    position: relative;
+    transition:transform 0.5s;
+}
+#first{
+    position: relative;
+    width:300px;
+    height:150px;
+    border:5px solid green;
+    margin:50px auto;
+}
+.leave{
+    transform:translateX(-100%);
+    z-index:1;
+}
+.enter{
+    transform:translateX(0);
+    z-index:1;
+    left:0;
+}
+.current{
+    transform:translateX(100%);
+}
